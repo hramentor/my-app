@@ -73,6 +73,7 @@ export const appRouter= createBrowserRouter([
         path:"/login",
         element:<Suspense><Login/></Suspense>
       },
+    
       {
         path:"/menu/:id",
         element: <Menu/>

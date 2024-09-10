@@ -17,7 +17,7 @@ const Menu = () => {
 if (menu===null)  return <h1>Menu loading</h1>
   const {name,costForTwoMessage} = menu.data.cards[2].card.card.info
   const cate= menu.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards.filter(each=> each.card.card["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
-  console.log(cate)
+ // console.log(cate)
   return (
     <div className=' text-center'>
       <h1 className=' font-bold my-5 text-2xl'>{name}</h1>

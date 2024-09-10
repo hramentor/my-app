@@ -11,9 +11,9 @@ const ItemList = (props) => {
 
   const dispatch= useDispatch()
 
-  const handleItem=()=>{
+  const handleItem=(item)=>{
 
-    dispatch(addItem("biryani"))
+    dispatch(addItem(item))
 
   }
     const {items,y} = props
@@ -36,7 +36,7 @@ const ItemList = (props) => {
                     </div>
                     <div className=' w-3/12'>
                     <div>
-                        <button className=' p-2 mx-16 rounded-lg bg-black text-white shadow-lg absolute' onClick={handleItem}>Add +</button>
+                        <button className=' p-2 mx-16 rounded-lg bg-black text-white shadow-lg absolute' onClick={()=>handleItem(item)}>Add +</button>
                     </div>
                     {
                         item.card.info.imageId && <img alt="res-ca" src={image_url+item.card.info.imageId} />
